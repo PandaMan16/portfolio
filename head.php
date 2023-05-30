@@ -8,6 +8,17 @@
     <title>Portfolio</title>
 </head>
 <body class="crt">
+
+    <dialog class="nes-dialog is-rounded" id="dialog-rounded">
+        <form method="dialog">
+        <p class="title"></p>
+        <p></p>
+        <menu class="dialog-menu">
+            <button class="nes-btn is-primary">ok</button>
+        </menu>
+        </form>
+    </dialog>
+
     <section id="nav">
         <span class="mobile"></span>
         <!-- <button class="nes-btn" data-page="Info">A propos</button> -->
