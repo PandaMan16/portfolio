@@ -41,7 +41,8 @@ function pages(pageName,option){
 nav.forEach(element => {
     element.addEventListener("click",(e)=>{
         if(e.target.dataset.page){
-            pages(e.target.dataset.page)
+            pages(e.target.dataset.page);
+            document.querySelector("#nav").classList.remove("actif");
         }
     },false);
 });

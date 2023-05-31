@@ -49,9 +49,9 @@ let pagescript = {
             desc.classList.remove("is-error");
         }
         if(error){
-            document.getElementById('dialog-rounded').showModal();
+            dialog.showModal();
         }else{
-            let message = "nom:"+name.value+"<br>email:<a href='mailto:"+email.value+"'>"+email.value+"</a><br>Numero: "+phone.value+"<br>Déscription<br>"+desc.value;
+            let message = "nom:"+name.value+" \r\n email: "+email.value+" \r\n Numero: "+phone.value+" \r\n Déscription \r\n "+desc.value;
             pagescript.sendEmail(message,email.value);
         }
     },
@@ -76,6 +76,10 @@ let pagescript = {
           if (response.ok) {
             const result = await response.json();
             console.log(result.message);
+            let dialog = document.getElementById('dialog-rounded');
+            dialog.querySelector(".title").innerHTML = "Mail";
+            dialog.querySelector("p").innerHTML = result.message;
+            dialog.showModal();
           } else {
             console.log('Une erreur s\'est produite lors de l\'envoi de l\'e-mail.');
           }

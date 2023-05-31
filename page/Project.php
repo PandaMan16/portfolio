@@ -37,9 +37,9 @@
                 <?php if($value["image"]["desktop"]!= ""){?>
                     <img class="desktop" src="<?php echo "./".$value["sdir"]."/".$value["image"]["desktop"];?>" alt="screen desktop project <?php echo $value["name"]; ?>">
                 <?php } ?>
-                <?php if($value["image"]["mobile"] != ""){?>
+                <!-- <?php if($value["image"]["mobile"] != ""){?>
                     <img class="mobile" src="<?php echo "./".$value["sdir"]."/".$value["image"]["mobile"];?>" alt="screen mobile project <?php echo $value["name"]; ?>">
-                <?php } ?>
+                <?php } ?> -->
                 <span class="text">Nom du project:<span><?php echo $value["name"]; ?></span><br>
                     <?php if($value["url"]["demo"]){
                         echo "lien vers la demo: <a href='https://".$value["url"]["demo"]."' target='_blank'>".$value["url"]["demo"]."</a> <br>"; 
