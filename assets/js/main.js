@@ -49,8 +49,24 @@ nav.forEach(element => {
 });
 
 // for mobile
-console.log(window.innerHeight);
-document.querySelector("#nav").style.top =(window.innerHeight-60)+"px";
+
+let fixElement = document.createElement('link');
+fixElement.id = "navfix";
+fixElement.rel = 'stylesheet';
+let cssContent = '#nav { top: ' + (window.innerHeight - 60) + 'px; } #nav.actif { top: ' + (window.innerHeight - 250) + 'px; }';
+let blob = new Blob([cssContent], { type: 'text/css' });
+let url = URL.createObjectURL(blob);
+fixElement.href = url;
+document.head.appendChild(fixElement);
+window.addEventListener("resize", ()=>{
+    let fixElement = document.querySelector("#navfix");
+    fixElement.id = "navfix";
+    fixElement.rel = 'stylesheet';
+    let cssContent = '#nav { top: ' + (window.innerHeight - 60) + 'px; } #nav.actif { top: ' + (window.innerHeight - 250) + 'px; }';
+    let blob = new Blob([cssContent], { type: 'text/css' });
+    let url = URL.createObjectURL(blob);
+    fixElement.href = url;
+});
 document.querySelector("#nav").addEventListener("click",(e)=>{
     e.target.classList.toggle("actif");
 },false)
