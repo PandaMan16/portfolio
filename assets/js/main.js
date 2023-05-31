@@ -1,6 +1,7 @@
 let nav = document.querySelectorAll("#nav > *");
 let page = document.querySelector("#page");
 let pagescript;
+
 import("../../page/Home.js").then((module)=>{
     pagescript = module.pagescript;
     pagescript.init();
@@ -48,6 +49,8 @@ nav.forEach(element => {
 });
 
 // for mobile
+console.log(window.innerHeight);
+document.querySelector("#nav").style.top =(window.innerHeight-60)+"px";
 document.querySelector("#nav").addEventListener("click",(e)=>{
     e.target.classList.toggle("actif");
 },false)
