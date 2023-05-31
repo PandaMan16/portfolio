@@ -40,7 +40,7 @@
                 <!-- <?php if($value["image"]["mobile"] != ""){?>
                     <img class="mobile" src="<?php echo "./".$value["sdir"]."/".$value["image"]["mobile"];?>" alt="screen mobile project <?php echo $value["name"]; ?>">
                 <?php } ?> -->
-                <span class="text">Nom du project:<span><?php echo $value["name"]; ?></span><br>
+                <span class="text">Nom du projet:<span><?php echo $value["name"]; ?></span><br>
                     <?php if($value["url"]["demo"]){
                         echo "lien vers la demo: <a href='https://".$value["url"]["demo"]."' target='_blank'>".$value["url"]["demo"]."</a> <br>"; 
                     } ?>

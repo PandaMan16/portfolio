@@ -29,15 +29,37 @@ body{
         transition: all 1s linear;
         &.actif{
             top: calc(100vh - 250px);
+            &::before{
+                content: '▼ ▼ ▼';
+                animation: line2 0.5s linear infinite;
+
+            }
         }
         &::before{
-            content: "_";
+            content: "▲ ▲ ▲";
+            animation: line1 0.5s linear infinite;
             width: 100%;
             height: 40px;
             color: black;
             text-align: center;
             background: #d9d9d9;
         }
+    }
+}
+@keyframes line1 {
+    0%{
+        line-height: 2.25rem;
+    }
+    100%{
+        line-height: 2.0rem;
+    }
+}
+@keyframes line2 {
+    0%{
+        line-height: 2.25rem;
+    }
+    100%{
+        line-height: 2.5rem;
     }
 }
 #page{

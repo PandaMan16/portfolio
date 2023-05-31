@@ -24,6 +24,6 @@
         <!-- <button class="nes-btn" data-page="Info">A propos</button> -->
         <!-- <button class="nes-btn" data-page="Service">Service</button> -->
         <button class="nes-btn" data-page="Home">Acceuil</button>
-        <button class="nes-btn" data-page="Project">Mes projet</button>
+        <button class="nes-btn" data-page="Project">Mes projets</button>
         <button class="nes-btn" data-page="Contact">Contact</button>
     </section>
