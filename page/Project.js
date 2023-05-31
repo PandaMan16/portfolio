@@ -7,7 +7,7 @@ let pagescript = {
                 document.querySelector("#project_"+e.target.dataset.id).style.display = "";
                 document.querySelectorAll("#project_"+e.target.dataset.id+" .text > *").forEach(element2 => {
                     element2.dataset.innerHTML = element2.innerHTML;
-                    panda.util.word.simple(element2,element2.innerHTML,50);
+                    panda.util.word.simple(element2,element2.innerHTML,50,true);
                 });
                 document.querySelector("#index_project").style.display = "none";
                 document.querySelector("#project_"+e.target.dataset.id+" > .back").addEventListener("click",(g) => {
