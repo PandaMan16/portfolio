@@ -4,11 +4,11 @@ let pagescript = {
     init:function(){
         document.querySelectorAll(".projectlist button").forEach(element => {
             element.addEventListener("click",(e)=>{
+                document.querySelector("#project_"+e.target.dataset.id).style.display = "";
                 document.querySelectorAll("#project_"+e.target.dataset.id+" .text > *").forEach(element2 => {
                     element2.dataset.innerHTML = element2.innerHTML;
                     panda.util.word.simple(element2,element2.innerHTML,50);
                 });
-                document.querySelector("#project_"+e.target.dataset.id).style.display = "";
                 document.querySelector("#index_project").style.display = "none";
                 document.querySelector("#project_"+e.target.dataset.id+" > .back").addEventListener("click",(g) => {
                     document.querySelectorAll("#project_"+e.target.dataset.id+" .text > *").forEach(element2 => {
