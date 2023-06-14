@@ -16,10 +16,14 @@
                             $idir = "./project/".$value."/";
                             $jsonString = file_get_contents($sdir."link.json");
                             $jsonData = json_decode($jsonString, true);
-                            $jsonData["sdir"] = $idir;
-                            $project[$key] = $jsonData;
-                            
-                            echo '<button type="button" data-id="'.$key.'" class="nes-btn"><p>'.$jsonData["name"].'</p><img src="'.$idir.$jsonData["image"]["desktop"].'"></button>';
+                            if($jsonData["hide"]){
+                                
+                            }else{
+                                $jsonData["sdir"] = $idir;
+                                $project[$key] = $jsonData;
+                                
+                                echo '<button type="button" data-id="'.$key.'" class="nes-btn"><p>'.$jsonData["name"].'</p><img src="'.$idir.$jsonData["image"]["desktop"].'"></button>';
+                            }
                         }
                     }
 
@@ -40,14 +44,14 @@
                 <!-- <?php if($value["image"]["mobile"] != ""){?>
                     <img class="mobile" src="<?php echo "./".$value["sdir"]."/".$value["image"]["mobile"];?>" alt="screen mobile project <?php echo $value["name"]; ?>">
                 <?php } ?> -->
-                <span class="text">Nom du projet:<span><?php echo $value["name"]; ?></span><br>
+                <span class="text">Nom du projet : <span><?php echo $value["name"]; ?></span><br>
                     <?php if($value["url"]["demo"]){
-                        echo "lien vers la demo: <a href='https://".$value["url"]["demo"]."' target='_blank'>".$value["url"]["demo"]."</a> <br>"; 
+                        echo "lien vers la demo : <a href='https://".$value["url"]["demo"]."' target='_blank'>".$value["url"]["demo"]."</a> <br>"; 
                     } ?>
                     <?php if($value["url"]["github"]){
-                        echo "lien vers github: <a href='https://".$value["url"]["github"]."' target='_blank'>".$value["url"]["github"]."</a> <br>"; 
+                        echo "lien vers github : <a href='https://".$value["url"]["github"]."' target='_blank'>".$value["url"]["github"]."</a> <br>"; 
                     } ?>
-                    <?php echo "Description:<span>".$value["description"]."</span>"; ?>
+                    <?php echo "Description : <span>".$value["description"]."</span>"; ?>
                 </span>
             </div>
         </div>

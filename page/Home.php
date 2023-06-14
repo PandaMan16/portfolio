@@ -3,10 +3,11 @@
     Développeur Web / WebMobile
 </p>
 <div class="lists word">
-    <p>Mes competance:</p>
+    <p>Mes compétences :</p>
     <ul class="nes-list is-disc">
         <li>HTML</li>
         <li>CSS/SCSS</li>
+        <li> Bootstrap</li>
         <li>Javascript</li>
         <li>PHP</li>
         <li>SQL</li>

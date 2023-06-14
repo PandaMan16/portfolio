@@ -27,12 +27,16 @@ function pages(pageName,option){
             return response.text();
         }
     }).then((html) => {
+        document.getElementById("page").classList.add("fade-out");
+        setTimeout(()=>{
+            document.getElementById("page").innerHTML = html;
+            import("../../page/"+pageName+".js").then((module)=>{
+                pagescript = module.pagescript;
+                pagescript.init();
+            });
+            document.getElementById("page").classList.remove("fade-out");
+        },500)
         
-        document.getElementById("page").innerHTML = html;
-        import("../../page/"+pageName+".js").then((module)=>{
-            pagescript = module.pagescript;
-            pagescript.init();
-        });
     }).catch(function (err) {
         console.warn('Something went wrong.', err);
         document.getElementById("page").innerHTML = "";

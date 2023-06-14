@@ -1,21 +1,21 @@
 <div class="contact">
     <div class="nes-container with-title">
         <p class="title">Mes coordonnées</p>
-        <span>Email: <a href="mailto:jordan@pandatown.fr">jordan@pandatown.fr</a></span>
-        <span>Téléphone: <span>+33 7 69 39 23 72</span></span>
+        <span>Email : <a href="mailto:jordan@pandatown.fr">jordan@pandatown.fr</a></span>
+        <span>Téléphone : <span>+33 7 69 39 23 72</span></span>
     </div>
     <div class="nes-container with-title">
         <p class="title">Formulaire de contact</p>
         <div class="nes-field is-inline">
-            <label for="name">Nom</label>:
+            <label for="name">Nom</label> :
             <input type="text" id="name" class="nes-input">
         </div>
         <div class="nes-field is-inline">
-            <label for="email">Email</label>:
+            <label for="email">Email</label> :
             <input type="text" id="email" class="nes-input">
         </div>
         <div class="nes-field is-inline">
-            <label for="phone">Numero</label>:
+            <label for="phone">Numero</label> :
             <input type="text" id="phone" class="nes-input">
         </div>
         <div class="nes-field">
