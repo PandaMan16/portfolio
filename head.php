@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Portfolio</title>
+    <title>Jordan Francois | Developpeur Web | Portfolio</title>
 </head>
 <body class="crt">
 
@@ -23,7 +23,7 @@
         <span class="mobile"></span>
         <!-- <button class="nes-btn" data-page="Info">A propos</button> -->
         <!-- <button class="nes-btn" data-page="Service">Service</button> -->
-        <button class="nes-btn" data-page="Home">Acceuil</button>
+        <button class="nes-btn" data-page="Home">Accueil</button>
         <button class="nes-btn" data-page="Project">Mes projets</button>
         <button class="nes-btn" data-page="Contact">Contact</button>
     </section>

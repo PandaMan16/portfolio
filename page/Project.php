@@ -1,5 +1,5 @@
 <div id="index_project" class="nes-container is-centered with-title is-rounded">
-    <p class="title">Mes Projet</p>
+    <p class="title">Mes Projets</p>
     <div class="projectlist">
         <?php 
 

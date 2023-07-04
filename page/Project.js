@@ -1,4 +1,4 @@
-import { panda } from "https://pandatown.fr/project/memory/pandalib.js";
+import { panda } from "https://pandatown.fr/lib/pandalib.php";
 
 let pagescript = {
     init:function(){
